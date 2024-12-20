@@ -8,6 +8,6 @@
   "devDependencies": {
     "@sbt/tsconfig": "*",
     "typescript": "latest",
-    "zod": "^3.24.1"
+    "zod": "latest"
   }
 }
