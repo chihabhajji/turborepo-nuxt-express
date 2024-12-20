@@ -1,6 +1,9 @@
 {
   "$schema": "https://turborepo.org/schema.json",
-  "pipeline": {
+  "envMode": "loose",
+  "globalDependencies": [".env", ".env.local"],
+  "globalEnv": ["KEYCLOAK_URL", "KEYCLOAK_REALM"],
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
@@ -9,7 +12,8 @@
       "outputs": []
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "passThroughEnv": ["KEYCLOAK_URL", "KEYCLOAK_REALM"]
     },
     "test": {
       "cache": false
@@ -17,5 +21,6 @@
     "prepare": {
       "cache": false
     }
-  }
+  },
+  "ui": "tui"
 }

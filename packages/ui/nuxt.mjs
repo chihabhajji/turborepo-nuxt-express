@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineNuxtModule({
+  meta: {},
   hooks: {
     "components:dirs"(dirs) {
       dirs.push({

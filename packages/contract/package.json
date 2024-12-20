@@ -1,0 +1,15 @@
+{
+  "name": "@sbt/contract",
+  "description": "the ts-rest contract for the SBT project",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@sbt/shared": "*",
+    "@ts-rest/core": "^3.51.0",
+    "typescript": "latest",
+    "zod": "latest"
+  }
+}

@@ -1,0 +1,10 @@
+services:
+  sbt-api-dashboard:
+    build: ./apps/api-sbt/
+    ports:
+      - "8081:8081"
+  sbt-front-dashboard:
+    build: ./apps/front-dashboard/
+    ports:
+      - "5000:5000"
+# TODO: rest after finishing the docker files
