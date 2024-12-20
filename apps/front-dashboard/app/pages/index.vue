@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import authenticatedMiddleware from "@sbt/ui/middleware/authenticated.middleware";
-definePageMeta({
-  middleware: [authenticatedMiddleware],
-});
-
-
+const { $keycloak } = useNuxtApp();
 </script>
 
 <template>
   <div>
-    hi?
+    <div v-if="$keycloak?.tokenParsed">
+      <span>Salut </span>{{ $keycloak.tokenParsed.name }}
+    </div>
     <!-- <h1>Nuxt Routing set up successfully!</h1> -->
     <!-- <p>Current route: {{ route.path }}</p> -->
     <!-- <a href="https://nuxt.com/docs/getting-started/routing" target="_blank" -->

@@ -22,7 +22,6 @@ export default defineNuxtPlugin({
     },
   },
   async setup() {
-    console.log("setting up");
     const runtimeConfig = useRuntimeConfig();
     const config: SBTKeycloakConfig = runtimeConfig.public as SBTKeycloakConfig;
     // Probably a good idea to check if the config is correct.
