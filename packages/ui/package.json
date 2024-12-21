@@ -7,12 +7,15 @@
     "test": "vitest run --config vitest.config.ts --coverage"
   },
   "devDependencies": {
+    "@nuxt/eslint": "^0.7.4",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/test-utils": "^2.0.2",
     "c8": "^7.12.0",
     "dotenv-flow": "^4.1.0",
+    "eslint": "^9.17.0",
     "jsdom": "^20.0.0",
     "nuxt": "^3.14.1592",
+    "typescript": "^5.7.2",
     "vite": "^6.0.5",
     "vitest": "^0.21.1",
     "vue": "^3.5.13"

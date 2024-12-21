@@ -1,0 +1,16 @@
+{
+  "name": "@sbt/eslint-config-custom",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./nuxt": "./nuxt-eslint.config.js",
+    "./default": "./eslint.config.js"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^0.7.4",
+    "eslint": "^9.17.0",
+    "nuxt": "^3.14.1592",
+    "typescript": "^5.7.2"
+  }
+}

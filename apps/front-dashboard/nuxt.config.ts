@@ -1,27 +1,30 @@
 import { defineNuxtConfig } from "nuxt/config";
+import { config } from "dotenv-flow";
+import eslintModuleConfig from "@sbt/ui/configs/eslint-module.config";
 
-require("dotenv-flow").config({
+config({
   node_env: process.env.NODE_ENV,
   path: "../..",
 });
-const keycloakConfig = {
-  keycloakUrl: process.env.KEYCLOAK_URL,
-  keycloakRealm: process.env.KEYCLOAK_REALM,
-  keycloakClientId: process.env.KEYCLOAK_CLIENT_ID,
-} as const;
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ["@sbt/ui"],
+  modules: ["@sbt/ui", "@nuxt/eslint"],
+  plugins: [
+    "@sbt/ui/plugins/keycloakjs.client.ts",
+    "@sbt/ui/plugins/vue-query.ts",
+    "@sbt/ui/plugins/vue-query-cient.ts",
+  ],
   runtimeConfig: {
     public: {
-      ...keycloakConfig,
+      keycloakUrl: process.env.KEYCLOAK_URL,
+      keycloakRealm: process.env.KEYCLOAK_REALM,
+      keycloakClientId: process.env.KEYCLOAK_CLIENT_ID,
     },
-    keycloakConfig,
   },
-  plugins: ["@sbt/ui/plugins/keycloakjs.client.ts"],
   future: {
     compatibilityVersion: 4,
   },
   compatibilityDate: "2024-12-20",
+  eslint: eslintModuleConfig,
 });

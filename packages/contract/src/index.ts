@@ -6,7 +6,7 @@ const c = initContract();
 
 export const sbtContract = c.router(
   {
-    companiesContract,
+    companies: companiesContract,
     // TODO: rest
   },
   {

@@ -10,7 +10,7 @@ const c = initContract();
 
 export const companiesContract = c.router(
   {
-    createPost: {
+    createCompany: {
       method: "POST" as const,
       path: "/" as const,
       responses: {
